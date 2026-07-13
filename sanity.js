@@ -51,45 +51,23 @@ try {
   failed = true;
 }
 
-// EXTRACT COVERAGE SUMMARY FROM LCOV
+// COVERAGE SUMMARY (JSON)
+const summaryPath = "coverage/coverage-summary.json";
 let coverageTable = "";
-const lcovFile = "coverage/lcov.info";
 
-if (fs.existsSync(lcovFile)) {
-  const lcov = fs.readFileSync(lcovFile, "utf8");
+if (fs.existsSync(summaryPath)) {
+  const summary = JSON.parse(fs.readFileSync(summaryPath, "utf8"));
+  const total = summary.total;
 
-  let totalLines = 0;
-  let coveredLines = 0;
+  const pct = (obj) => obj.pct ?? 0;
 
-  let totalBranches = 0;
-  let coveredBranches = 0;
-
-  let totalFuncs = 0;
-  let coveredFuncs = 0;
-
-  const lines = lcov.split("\n");
-
-  for (const line of lines) {
-    if (line.startsWith("LF:")) totalLines += parseInt(line.substring(3));
-    if (line.startsWith("LH:")) coveredLines += parseInt(line.substring(3));
-
-    if (line.startsWith("BRF:")) totalBranches += parseInt(line.substring(4));
-    if (line.startsWith("BRH:")) coveredBranches += parseInt(line.substring(4));
-
-    if (line.startsWith("FNF:")) totalFuncs += parseInt(line.substring(4));
-    if (line.startsWith("FNH:")) coveredFuncs += parseInt(line.substring(4));
-  }
-
-  const pct = (covered, total) =>
-    total === 0 ? 100 : Math.round((covered / total) * 100);
-
-  const pctLines = pct(coveredLines, totalLines);
-  const pctBranches = pct(coveredBranches, totalBranches);
-  const pctFuncs = pct(coveredFuncs, totalFuncs);
-  const pctStmts = pctLines; // Vitest = lines = statements
+  const pctStatements = pct(total.statements);
+  const pctBranches = pct(total.branches);
+  const pctFuncs = pct(total.functions);
+  const pctLines = pct(total.lines);
 
   coverageTable = `
-Statements : ${pctStmts}%
+Statements : ${pctStatements}%
 Branches   : ${pctBranches}%
 Functions  : ${pctFuncs}%
 Lines      : ${pctLines}%
