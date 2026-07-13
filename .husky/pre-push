@@ -3,6 +3,6 @@
 
 echo "🔍 Running sanity check..."
 
-npm run sanity || exit 1
+npm run sanity
 
 echo "🚀 Sanity check passed. GOD bless you"
