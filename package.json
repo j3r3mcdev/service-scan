@@ -10,7 +10,8 @@
     "test:ci": "vitest --run",
     "sanity": "node sanity.js full",
     "sanity:lite": "node sanity.js lite",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [
     "security",
