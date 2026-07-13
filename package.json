@@ -11,7 +11,7 @@
     "sanity": "node sanity.js full",
     "sanity:lite": "node sanity.js lite",
     "prepare": "husky install",
-    "coverage": "vitest run --coverage"
+    "coverage": "npx vitest run --coverage"
   },
   "keywords": [
     "security",
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "@vitest/coverage-v8": "^1.6.0",
     "husky": "^9.1.7",
     "rimraf": "^5.0.5",
     "typescript": "5.4.5",
