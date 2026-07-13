@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
-    "moduleResolution": "node10",
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "6.0",
 
     "outDir": "./dist",
     "rootDir": "./src",
@@ -16,7 +17,6 @@
     "noImplicitAny": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "ignoreDeprecations": "6.0",
 
     "types": ["node"]
   },
