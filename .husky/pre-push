@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 Running sanity check..."
+
+npm run sanity || exit 1
+
+echo "🚀 Sanity check passed. GOD bless you"

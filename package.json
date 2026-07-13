@@ -1,0 +1,46 @@
+{
+  "name": "service-scan",
+  "version": "1.0.0",
+  "description": "service scanner pour la suite de cyber-sécurité",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "test": "vitest --run",
+    "test:ci": "vitest --run",
+    "sanity": "node sanity.js full",
+    "sanity:lite": "node sanity.js lite",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "vulnerability",
+    "detection",
+    "lib-scan"
+  ],
+  "author": "Jérémy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/j3r3mcdev/lib-scan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/j3r3mcdev/lib-scan/issues"
+  },
+  "homepage": "https://github.com/j3r3mcdev/lib-scan#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "husky": "^9.1.7",
+    "rimraf": "^5.0.5",
+    "typescript": "5.4.5",
+    "vitest": "1.6.0"
+  }
+}
