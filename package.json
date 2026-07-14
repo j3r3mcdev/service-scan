@@ -39,10 +39,16 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "esbuild": "^0.21.5",
     "husky": "^9.1.7",
     "rimraf": "^5.0.5",
     "typescript": "5.4.5",
-    "vitest": "1.6.0"
+    "vite": "^5.2.10",
+    "vite-node": "^1.6.0",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "@j3r3mcdev/lib-scan": "^1.0.5"
   }
 }
