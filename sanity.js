@@ -37,7 +37,7 @@ try {
 run("🔍 Checking TypeScript...", "tsc --noEmit");
 
 // BUILD
-run("🏗 Building project...", "tsc");
+run("🏗 Building project...", "tsc -p tsconfig.build.json");
 
 // TESTS + CAPTURE COVERAGE (Vitest)
 log("🧪 Running Vitest tests...");
