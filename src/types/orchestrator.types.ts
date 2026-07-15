@@ -1,17 +1,15 @@
-import type { ScanServiceResult } from "./scan-context.types";
-
-/**
- * Payload envoyé à l'orchestrator.
- */
-export interface OrchestratorPayload {
-  scan: ScanServiceResult;
-  correlationId?: string;
+export interface OrchestratorRequest {
+  scanId: string;
+  payload: OrchestratorPayload;
 }
 
-/**
- * Réponse de l'orchestrator (si besoin).
- */
+export interface OrchestratorPayload {
+  type: string;
+  data: unknown;
+}
+
 export interface OrchestratorResponse {
-  accepted: boolean;
-  correlationId?: string;
+  status: "accepted" | "rejected";
+  orchestratorId: string;
+  receivedAt: number;
 }
