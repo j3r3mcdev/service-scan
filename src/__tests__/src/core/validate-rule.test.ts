@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { validateDetector } from "../../core/utils/validate-rule";
+import { validateDetector } from "../../../core/utils/validate-rule";
 import { ScanDetector } from "@j3r3mcdev/lib-scan";
 
 const valid: ScanDetector = {

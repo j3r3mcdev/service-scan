@@ -18,7 +18,7 @@ vi.mock("@j3r3mcdev/lib-scan", () => {
 });
 
 // Après le mock → on importe le loader
-import { loadLibScanDetectors } from "../../core/scan.loader";
+import { loadLibScanDetectors } from "../../../core/scan.loader";
 
 describe("loadLibScanDetectors", () => {
   it("charge uniquement les détecteurs valides", () => {

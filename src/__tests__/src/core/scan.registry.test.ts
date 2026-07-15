@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { ScanRegistry } from "../../core/scan.registry";
+import { ScanRegistry } from "../../../core/scan.registry";
 import {
   ScanDetector,
   ScanRegistry as LibScanRegistry,
