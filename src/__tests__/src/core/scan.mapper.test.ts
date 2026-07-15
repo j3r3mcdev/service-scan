@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { ScanMapper } from "../../core/scan.mapper";
+import { ScanMapper } from "../../../core/scan.mapper";
 import { ScanResult } from "@j3r3mcdev/lib-scan";
 
 describe("ScanMapper", () => {
