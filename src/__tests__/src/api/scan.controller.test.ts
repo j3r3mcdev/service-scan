@@ -3,29 +3,17 @@ import type { IncomingMessage, ServerResponse } from "node:http";
 import { ScanController } from "../../../api/controllers/scan.controller";
 import type { ScanServiceResult } from "../../../types";
 
-vi.mock("../../../adapters/scan.service.adapter", () => {
+vi.mock("../../../src/adapters/scan.service.adapter", () => {
   return {
-    ScanServiceAdapter: vi.fn().mockImplementation(() => ({
-      scan: vi.fn(
-        async () =>
-          ({
-            result: {
-              score: 42,
-              severity: "medium",
-              findings: [],
-              chains: [],
-              timestamp: Date.now(),
-              metadata: {},
-            },
-            context: {
-              correlationId: "corr-1",
-              durationMs: 10,
-              detectorCount: 0,
-              adapterCount: 0,
-            },
-          }) satisfies ScanServiceResult,
-      ),
-    })),
+    ScanServiceAdapter: class {
+      scan = vi.fn(async () => ({
+        result: {
+          score: 42,
+          severity: "medium",
+          findings: [],
+        },
+      }));
+    },
   };
 });
 
