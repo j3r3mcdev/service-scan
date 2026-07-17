@@ -50,21 +50,25 @@ vi.mock("../../../api/mappers/scan-context.mapper", () => ({
 }));
 
 // Mock ScanService
-vi.mock("../../../core/scan.service", () => ({
-  ScanService: vi.fn().mockImplementation(() => ({
-    run: vi.fn(() => {
-      const result: ScanResult = {
-        score: 42,
-        severity: "low",
-        findings: [],
-        chains: [],
-        timestamp: Date.now(),
-        metadata: {},
-      };
-      return result;
-    }),
-  })),
-}));
+vi.mock("../../../core/scan.service", () => {
+  return {
+    ScanService: class {
+      constructor() {}
+
+      run = vi.fn(() => {
+        const result: ScanResult = {
+          score: 42,
+          severity: "low",
+          findings: [],
+          chains: [],
+          timestamp: Date.now(),
+          metadata: {},
+        };
+        return result;
+      });
+    },
+  };
+});
 
 describe("ScanServiceAdapter", () => {
   it("scan() retourne un résultat formaté correctement", async () => {
