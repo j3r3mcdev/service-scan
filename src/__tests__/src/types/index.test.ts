@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import * as ServiceScan from "../../../index";
+import * as ServiceScan from "../../../index.js";
 
 describe("src/index.ts", () => {
   it("expose core et types", () => {
