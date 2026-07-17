@@ -1,7 +1,5 @@
-import {
-  ScanDetector,
-  ScanRegistry as LibScanRegistry,
-} from "@j3r3mcdev/lib-scan";
+import type { ScanDetector } from "@j3r3mcdev/lib-scan";
+import { ScanRegistry as LibScanRegistry } from "@j3r3mcdev/lib-scan";
 
 export class ScanRegistry {
   private readonly registry = new LibScanRegistry();

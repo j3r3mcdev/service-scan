@@ -1,4 +1,7 @@
-import type { OrchestratorRequest, OrchestratorResponse } from "../types";
+import type {
+  OrchestratorRequest,
+  OrchestratorResponse,
+} from "../types/index.js";
 
 export class OrchestratorAdapter {
   constructor(private readonly baseUrl: string) {}

@@ -1,4 +1,4 @@
-import type { ScoringPayload, ScoringResponse } from "../types";
+import type { ScoringPayload, ScoringResponse } from "../types/index.js";
 
 export class ScoringAdapter {
   constructor(private readonly baseUrl: string) {}

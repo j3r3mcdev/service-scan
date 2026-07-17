@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { ScanMapper } from "../../../core/scan.mapper";
-import { ScanResult } from "@j3r3mcdev/lib-scan";
+import type { ScanResult } from "@j3r3mcdev/lib-scan";
 
 describe("ScanMapper", () => {
   const mapper = new ScanMapper();

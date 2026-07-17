@@ -1,4 +1,4 @@
-import type { NormalizedEvent } from "./normalized-event.types";
+import type { NormalizedEvent } from "./normalized-event.types.js";
 
 /**
  * Payload d'entrée de l'API de scan.

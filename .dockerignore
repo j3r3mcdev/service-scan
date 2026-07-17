@@ -1,0 +1,26 @@
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build
+dist
+coverage
+.vitest
+.vscode
+
+# Tests
+src/__tests__
+*.test.ts
+a
+# Git
+.git
+.gitignore
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Scripts / tooling
+scripts/
+tools/

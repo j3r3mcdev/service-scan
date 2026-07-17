@@ -1,9 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { ScanRegistry } from "../../../core/scan.registry";
-import {
-  ScanDetector,
-  ScanRegistry as LibScanRegistry,
-} from "@j3r3mcdev/lib-scan";
+import { ScanRegistry as LibScanRegistry } from "@j3r3mcdev/lib-scan";
+import type { ScanDetector } from "@j3r3mcdev/lib-scan";
 
 const makeDetector = (id: string): ScanDetector => ({
   id,

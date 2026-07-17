@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  service-scan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NPM_TOKEN: ${NPM_TOKEN}
+    image: service-scan:latest
+
+    # Port aléatoire : Docker choisit automatiquement un port disponible
+    ports:
+      - "3000:3000"
+
+    environment:
+      NODE_ENV: production
+
+    # Redémarrage propre pour tests
+    restart: unless-stopped

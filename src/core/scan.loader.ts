@@ -1,6 +1,6 @@
 import * as LibScan from "@j3r3mcdev/lib-scan";
 
-import { ScanDetector } from "@j3r3mcdev/lib-scan";
+import type { ScanDetector } from "@j3r3mcdev/lib-scan";
 
 export const loadLibScanDetectors = (): ScanDetector[] => {
   const detectors: ScanDetector[] = [];

@@ -1,5 +1,5 @@
-import { validateConfig } from "./config.schema";
-import type { ServiceScanConfig } from "./config.types";
+import { validateConfig } from "./config.schema.js";
+import type { ServiceScanConfig } from "./config.types.js";
 
 export class ConfigLoader {
   static load(env: NodeJS.ProcessEnv): ServiceScanConfig {

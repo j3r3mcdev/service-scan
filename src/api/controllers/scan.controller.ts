@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { ScanServiceAdapter } from "../../adapters/scan.service.adapter";
-import type { ScanExecutionContext } from "../../types";
+import { ScanServiceAdapter } from "../../adapters/scan.service.adapter.js";
+import type { ScanExecutionContext } from "../../types/index.js";
 
 export class ScanController {
   private readonly adapter = new ScanServiceAdapter();

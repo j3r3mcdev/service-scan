@@ -1,5 +1,5 @@
 import http from "node:http";
-import { registerScanRoutes } from "./routes/scan.routes";
+import { registerScanRoutes } from "./routes/scan.routes.js";
 
 export class HttpServer {
   private server: http.Server;

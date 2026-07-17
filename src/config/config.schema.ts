@@ -1,4 +1,4 @@
-import type { ServiceScanConfig } from "./config.types";
+import type { ServiceScanConfig } from "./config.types.js";
 
 export function validateConfig(
   config: Partial<ServiceScanConfig>,

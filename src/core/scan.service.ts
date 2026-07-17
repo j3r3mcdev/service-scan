@@ -1,10 +1,11 @@
-import {
+import type {
   ScanContext,
   ScanDetector,
-  ScanPipeline,
   ScanResult,
 } from "@j3r3mcdev/lib-scan";
-import { ScanMapper } from "./scan.mapper";
+
+import { ScanPipeline } from "@j3r3mcdev/lib-scan";
+import { ScanMapper } from "./scan.mapper.js";
 
 export class ScanService {
   private readonly pipeline: ScanPipeline;

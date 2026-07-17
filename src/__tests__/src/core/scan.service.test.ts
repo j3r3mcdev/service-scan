@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { ScanService } from "../../../core/scan.service";
 import { ScanMapper } from "../../../core/scan.mapper";
-import { ScanDetector, ScanContext } from "@j3r3mcdev/lib-scan";
+import type { ScanDetector, ScanContext } from "@j3r3mcdev/lib-scan";
 
 const context: ScanContext = {
   events: [],

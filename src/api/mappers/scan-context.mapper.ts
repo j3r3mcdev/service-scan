@@ -1,4 +1,4 @@
-import type { ScanExecutionContext } from "../../types";
+import type { ScanExecutionContext } from "../../types/index.js";
 import type { ScanContext } from "@j3r3mcdev/lib-scan";
 
 export class ApiScanContextMapper {

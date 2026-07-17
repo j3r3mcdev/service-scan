@@ -1,2 +1,2 @@
-export * from "./orchestrator.adapter";
-export * from "./scoring.adapter";
+export * from "./orchestrator.adapter.js";
+export * from "./scoring.adapter.js";

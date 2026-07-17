@@ -1,5 +1,6 @@
-/** @type {import('vitest').UserConfig} */
-module.exports = {
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
   test: {
     globals: true,
     coverage: {
@@ -11,4 +12,4 @@ module.exports = {
       exclude: ["src/**/*.test.ts", "src/**/__tests__/**"],
     },
   },
-};
+});

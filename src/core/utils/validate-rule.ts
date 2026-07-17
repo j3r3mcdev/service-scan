@@ -1,4 +1,4 @@
-import { ScanDetector } from "@j3r3mcdev/lib-scan";
+import type { ScanDetector } from "@j3r3mcdev/lib-scan";
 
 export const validateDetector = (detector: ScanDetector): void => {
   if (!detector) throw new Error("Detector is null or undefined");

@@ -1,7 +1,7 @@
-import { loadLibScanDetectors } from "../core/scan.loader";
-import { ScanMapper } from "../core/scan.mapper";
-import { ScanService } from "../core/scan.service";
-import { ApiScanContextMapper } from "../api/mappers/scan-context.mapper";
+import { loadLibScanDetectors } from "../core/scan.loader.js";
+import { ScanMapper } from "../core/scan.mapper.js";
+import { ScanService } from "../core/scan.service.js";
+import { ApiScanContextMapper } from "../api/mappers/scan-context.mapper.js";
 
 import type { ScanExecutionContext, ScanServiceResult } from "../types";
 
